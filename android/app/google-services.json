@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "222999974868",
+    "project_id": "socialauth-1024e",
+    "storage_bucket": "socialauth-1024e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222999974868:android:63d777aac6588994493c41",
+        "android_client_info": {
+          "package_name": "com.paymentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222999974868-jrt7912744484o5jqh2vgcgjc2n6d9fe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paymentapp",
+            "certificate_hash": "1cd9f2ebef1a4f904ef23da0eb5fa17b93af03db"
+          }
+        },
+        {
+          "client_id": "222999974868-f5n9u40n4j2ln90tnp48a1534c7sn4ns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWbl5szAKwdD0n0vRdWgP1pWZyfv4it6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222999974868-f5n9u40n4j2ln90tnp48a1534c7sn4ns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

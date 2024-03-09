@@ -42,7 +42,7 @@ const App = () => {
     <PaperProvider theme={theme}>
       <NavigationContainer>
         {/* <BottomNavigation /> */}
-        <Login/>
+        <Login />
       </NavigationContainer>
     </PaperProvider>
   );
