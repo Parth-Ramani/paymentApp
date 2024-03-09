@@ -13,6 +13,7 @@ import OnBoarding1 from './src/screens/OnBoarding1';
 import OnBoarding2 from './src/components/OnBoarding2';
 import OnBoarding3 from './src/components/OnBoarding3';
 import Login from './src/screens/Login';
+import Settings from './src/screens/Settings';
 // const setUpFonts = (fonts) => {
 //   let fontsObj = {}
 //   Object.entries(fonts)?.forEach(([key, obj]) => {
@@ -41,7 +42,7 @@ const App = () => {
     <PaperProvider theme={theme}>
       <NavigationContainer>
         {/* <BottomNavigation /> */}
-<Achivements/>
+        <Login/>
       </NavigationContainer>
     </PaperProvider>
   );

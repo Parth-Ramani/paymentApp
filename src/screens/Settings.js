@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import AppBar from '../components/AppBar';
 import {Acc, Logout, Noti, Pay, Prof, Search, Sec, Sup, Ud} from '../../assets/Svg';
@@ -7,6 +7,7 @@ const Settings = () => {
   return (
     <View style={{flex: 1, backgroundColor: 'rgb(229, 243, 253)'}}>
       <AppBar />
+      <ScrollView>
       <View style={styles.whtCont}>
         <Text style={styles.Stg}>Settings</Text>
         <View style={styles.txtinput}>
@@ -48,6 +49,7 @@ const Settings = () => {
           <Text style={styles.txt}>Log out</Text>
         </TouchableOpacity>
       </View>
+      </ScrollView>
     </View>
   );
 };
@@ -57,12 +59,13 @@ export default Settings;
 const styles = StyleSheet.create({
   whtCont: {
     display:'flex',
-    
+  
     width: '90%',
     alignSelf: 'center',
     backgroundColor: '#fff',
     borderRadius: 14,
     marginTop: '5%',
+    paddingBottom:7
   },
   Stg: {
     padding: 12,

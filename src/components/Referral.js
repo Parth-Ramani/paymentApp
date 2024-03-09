@@ -1,7 +1,7 @@
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import React from 'react';
 import AppBar from './AppBar';
-import {Clp, Env} from '../../assets/Svg';
+import {Clp, En, Env, Hm, Stg} from '../../assets/Svg';
 
 const Referral = () => {
   return (
@@ -28,6 +28,26 @@ const Referral = () => {
       <View style={styles.whtsml}>
         <Env />
         <Text style={styles.blk}>Invite someone to appear here</Text>
+      </View>
+      <View style={styles.container}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Screen1')}
+          style={styles.tab}>
+          <Hm/>
+          <Text style={styles.tabtxt}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Screen2')}
+          style={styles.tab}>
+          <En />
+          <Text style={styles.tabtxt}>Earn</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Screen3')}
+          style={styles.tab}>
+          <Stg />
+          <Text style={styles.tabtxt}>Settings</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -118,5 +138,22 @@ const styles = StyleSheet.create({
   blk: {
     marginLeft: '5%',
     color: 'black',
+  },  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#fff',
+   paddingTop:2
+  },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  tabtxt:{
+    fontSize:12,color:'rgba(207, 229, 237, 1)'
   },
 });

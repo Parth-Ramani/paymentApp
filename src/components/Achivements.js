@@ -7,7 +7,17 @@ import {
 } from 'react-native';
 import React from 'react';
 import AppBar from './AppBar';
-import {Blue, Bluei, Blues, I, Profile, Star} from '../../assets/Svg';
+import {
+  Blue,
+  Bluei,
+  Blues,
+  En,
+  Hm,
+  I,
+  Profile,
+  Star,
+  Stg,
+} from '../../assets/Svg';
 import {ProgressBar} from 'react-native-paper';
 import Linearbtn from './Linearbtn';
 const Achivements = () => {
@@ -30,15 +40,15 @@ const Achivements = () => {
               <Text style={styles.leveltxt}>Level</Text>
             </View>
             <View style={styles.expBox}>
-              <Text style={styles.expText} >0/316 experience</Text>
+              <Text style={styles.expText}>0/316 experience</Text>
               <ProgressBar
-            progress={0.1}
-            color={'green'}
-            style={{width: '95%', alignSelf: 'center', marginTop: '4%'}}
-          />
+                progress={0.1}
+                color={'green'}
+                style={{width: '95%', alignSelf: 'center', marginTop: '4%'}}
+              />
             </View>
-            <View style={styles.leve2}>   
-            <Text style={styles.leveltxt}>1</Text>
+            <View style={styles.leve2}>
+              <Text style={styles.leveltxt}>1</Text>
               <Text style={styles.leveltxt}>Level</Text>
             </View>
           </View>
@@ -123,6 +133,26 @@ const Achivements = () => {
           <Linearbtn label="Play Games" />
         </View>
       </ScrollView>
+      <View style={styles.container}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Screen1')}
+          style={styles.tab}>
+          <Hm />
+          <Text style={styles.tabtxt}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Screen2')}
+          style={styles.tab}>
+          <En />
+          <Text style={styles.tabtxt}>Earn</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Screen3')}
+          style={styles.tab}>
+          <Stg />
+          <Text style={styles.tabtxt}>Settings</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -131,7 +161,6 @@ export default Achivements;
 
 const styles = StyleSheet.create({
   blueCont: {
-   
     marginTop: '2%',
     flex: 1,
     alignSelf: 'center',
@@ -145,26 +174,29 @@ const styles = StyleSheet.create({
     position: 'absolute',
 
     alignSelf: 'flex-end',
-    marginRight: '5%', 
+    marginRight: '5%',
     marginTop: '5%',
     position: 'absolute',
   },
-  name:{
-color:'#fff',fontSize:24,position:'absolute',fontWeight:'700',alignSelf:'center',marginTop:130
+  name: {
+    color: '#fff',
+    fontSize: 24,
+    position: 'absolute',
+    fontWeight: '700',
+    alignSelf: 'center',
+    marginTop: 130,
   },
   leve1: {
     alignItems: 'center',
     marginLeft: '3%',
     paddingTop: 12,
     paddingBottom: 12,
-  
-  
   },
   leve2: {
     alignItems: 'center',
     marginRight: '3%',
     paddingTop: 12,
- 
+
     paddingBottom: 12,
   },
   exps: {
@@ -178,23 +210,24 @@ color:'#fff',fontSize:24,position:'absolute',fontWeight:'700',alignSelf:'center'
     alignSelf: 'center',
     marginTop: 200,
     borderRadius: 12,
-    padding:7
+    padding: 7,
   },
-leveltxt:{
-color:'black',
-fontSize:12,fontWeight:'700'
+  leveltxt: {
+    color: 'black',
+    fontSize: 12,
+    fontWeight: '700',
+  },
+  expText: {
+    color: 'black',
+    fontSize: 12,
+    fontWeight: '500',
+  },
+  expBox: {
+    alignItems: 'center',
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
 
-},
-expText:{
-  color:'black',
-  fontSize:12,fontWeight:'500'
-},
-expBox:{
-  alignItems:'center',
-   paddingLeft:10,paddingRight:10
-}
-  
-  ,
   greenCont: {
     width: '90%',
     alignSelf: 'center',
@@ -260,11 +293,10 @@ expBox:{
     fontSize: 12,
     paddingLeft: 10,
     paddingTop: 30,
-    marginBottom:'7%',
+    marginBottom: '7%',
     color: 'rgba(121, 121, 121, 1)',
   },
   btn: {
-    
     alignItems: 'center',
     backgroundColor: 'rgba(0, 164, 228, 1)',
     padding: 18,
@@ -274,4 +306,23 @@ expBox:{
     marginTop: '10%',
   },
   btntxt: {},
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#fff',
+    paddingTop: 2,
+  },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  tabtxt: {
+    fontSize: 12,
+    color: 'rgba(207, 229, 237, 1)',
+  },
 });

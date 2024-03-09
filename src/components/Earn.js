@@ -1,7 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import AppBar from './AppBar';
-import {Adj, Aye, Fyber, Right, Tapjoy} from '../../assets/Svg';
+import {Adj, Aye, En, Fyber, Hm, Right, Stg, Tapjoy} from '../../assets/Svg';
 import CustomButton from './CustomButton';
 
 const Earn = () => {
@@ -55,6 +55,21 @@ const Earn = () => {
           <Text style={styles.btntxt}>Play</Text>
         </CustomButton>
       </View>
+      <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate('Screen1')} style={styles.tab}>
+        <Hm/>
+        <Text style={styles.tabtxt}>Home</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Screen2')} style={styles.tab}>
+      <En/>
+        <Text style={styles.tabtxt}>Earn</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Screen3')} style={styles.tab}>
+      <Stg/>
+        <Text style={styles.tabtxt}>Settings</Text>
+      </TouchableOpacity>
+      
+    </View>
     </View>
   );
 };
@@ -128,5 +143,23 @@ const styles = StyleSheet.create({
    color:'rgba(0, 164, 228, 1)',
    fontSize:12,
    fontWeight:'700'
+  },
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#fff',
+   paddingTop:2
+  },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  tabtxt:{
+    fontSize:12,color:'rgba(207, 229, 237, 1)'
   },
 });

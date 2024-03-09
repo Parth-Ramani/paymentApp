@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     width: 130,
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     marginLeft: '4%',
+    paddingBottom:3,
     justifyContent:'center',
     alignItems: 'center',
 

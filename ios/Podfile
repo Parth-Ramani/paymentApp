@@ -26,10 +26,10 @@ if linkage != nil
 end
 
 target 'paymentapp' do
-  config = use_native_modules!
+  
 
   use_react_native!(
-    :path => config[:reactNativePath],
+    :path => '/Users/ciimac/Documents/',
     # Enables Flipper.
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
@@ -38,6 +38,7 @@ target 'paymentapp' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  
 
   target 'paymentappTests' do
     inherit! :complete
